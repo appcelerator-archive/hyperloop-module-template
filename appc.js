@@ -5,7 +5,7 @@ module.exports = {
     // Basic configuration
     type: 'module',
     group: 'titanium',
-    minsdk: 6.0.0,
+    minsdk: '6.0.0',
     platforms: {
         ios: {
             vendor: {
