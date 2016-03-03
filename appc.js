@@ -9,11 +9,13 @@ module.exports = {
     platforms: {
         ios: {
             vendor: {
+
+                // Q: How would we make sure this is unique accross modules?
                 'MyFramework': {
                      // these can be an array or string
-                     source: ['src'],
-                     header: 'src',
-                     resource: 'src'
+                     source: ['vendor'],
+                     header: 'vendor',
+                     resource: 'vendor'
                 }
             }
         },
@@ -24,4 +26,4 @@ module.exports = {
             vendor: {}
         }
     }
-}
+};

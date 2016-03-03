@@ -1,5 +1,6 @@
 {
     "name": "ti-test",
+    "version": "1.0.0",
     "description": "Hyperloop based example module for Titanium Mobile.",
     "author": "Appcelerator, Inc.",
     "copyright": "Copyright (c) 2016 by Appcelerator",
