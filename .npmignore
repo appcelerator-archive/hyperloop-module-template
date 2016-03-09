@@ -5,3 +5,9 @@ dist
 .babelrc
 gulpfile.js
 *.tgz
+.DS_Store
+._*
+.babelrc
+npm-debug.log
+.git*
+.travis.yml

@@ -2,3 +2,6 @@ lib
 node_modules
 dist
 *.tgz
+._*
+.DS_Store*
+npm-debug.log
