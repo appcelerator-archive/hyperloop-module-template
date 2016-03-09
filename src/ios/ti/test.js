@@ -4,7 +4,7 @@
  * Created by Appcelerator, Inc
  * Copyright (c) 2016 Appcelerator. All rights reserved.
  */
-import { View } from './view';
+export { default as View } from './view';
 
 export default class Test {
 
@@ -21,7 +21,4 @@ export default class Test {
 		this.app.logger.info(this.module.id + ' shutdown');
 	}
 
-	static createView (opts = {}) {
-		return new View(opts);
-	}
 }
