@@ -1,7 +1,6 @@
 test
 src
 node_modules
-dist
 .babelrc
 gulpfile.js
 *.tgz
