@@ -12,21 +12,6 @@ var label = Ti.UI.createLabel();
 win.add(label);
 win.open();
 
-// TODO: write your module tests here
-var myModule = require('ti-test');
-Ti.API.info("module is => " + myModule);
-
-label.text = myModule.example();
-
-Ti.API.info("module exampleProp is => " + myModule.exampleProp);
-myModule.exampleProp = "This is a test value";
-
-var view = myModule.createView({
-	message: "Creating an example Proxy",
-	backgroundColor: "red",
-	width: 100,
-	height: 100,
-	top: 100,
-	left: 150
-});
+var View = require('ti/test').View;
+var view = new View();
 win.add(view);
