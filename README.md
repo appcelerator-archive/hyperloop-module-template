@@ -1,29 +1,28 @@
 # Hyperloop Module Template
 
-This is the template Hyperloop module template project.  You should modify it to suit your specific needs.
+This is the template Hyperloop module template project. You should modify it to suit your specific needs.
 
 ## Requirements
 
 You will need the following to build this project.
 
-	- [Babel CLI](https://babeljs.io/docs/setup/) `[sudo] npm i babel-cli -g`
-	- [Gulp](http://gulpjs.com) `[sudo] npm i gulp-cli -g`
+- [x] [Babel CLI](https://babeljs.io/docs/setup/) `[sudo] npm i babel-cli -g`
+- [x] [Gulp](http://gulpjs.com) `[sudo] npm i gulp-cli -g`
 
 ## Installation
 
 Once you have your required dependencies, you can install the local project dependencies:
-
-	npm install
-
-
+```
+npm install
+```
 ## Contributing
 
-This is an open source project. PACKAGE_NAME wouldn't be where it is now without
-contributions by the community. Please consider forking PACKAGE_NAME to improve,
+This is an open source project. `hyperloop-module-template` wouldn't be where it is now without
+contributions by the community. Please consider forking `hyperloop-module-template` to improve,
 enhance or fix issues. If you feel like the community will benefit from your
 fork, please open a pull request.
 
-To protect the interests of the PACKAGE_NAME contributors, Appcelerator, customers
+To protect the interests of the `hyperloop-module-template` contributors, Appcelerator, customers
 and end users we require contributors to sign a Contributors License Agreement
 (CLA) before we pull the changes into the main repository. Our CLA is simple and
 straightforward - it requires that the contributions you make to any
@@ -43,4 +42,4 @@ This project is open source and provided under the Apache Public License (versio
 Please make sure you see the LICENSE file included in this distribution for more
 details on the license. Also, please take notice of the privacy notice at the end of the file.
 
-(C) Copyright 2016, [Appcelerator, Inc](http://www.appcelerator.com) All Rights Reserved.
+&copy; Copyright 2016, [Appcelerator, Inc](http://www.appcelerator.com). All Rights Reserved.
