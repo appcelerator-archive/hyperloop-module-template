@@ -16,7 +16,7 @@
   ],
   "scripts": {
     "build": "gulp build",
-    "prepublish": "gulp build",
+    "prepublish": "gulp clean build",
     "test": "NODE_PATH=./test/mocks gulp test-exec"
   },
   "engines": {

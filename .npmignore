@@ -10,3 +10,6 @@ gulpfile.js
 npm-debug.log
 .git*
 .travis.yml
+.npmignore
+.eslintrc
+.appcignore

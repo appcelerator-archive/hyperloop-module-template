@@ -3,8 +3,8 @@
  */
 module.exports = {
   // Basic configuration
-  type: 'module',
-  group: 'titanium',
+  type: 'timodule',
+  group: 'hyperloop',
   platforms: {
     ios: {
       vendor: {
