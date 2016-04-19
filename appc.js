@@ -5,6 +5,7 @@ module.exports = {
   // Basic configuration
   type: 'timodule',
   group: 'hyperloop',
+  subtype: 'hyperloop',
   platforms: {
     ios: {
       vendor: {
