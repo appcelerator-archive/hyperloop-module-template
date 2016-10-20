@@ -3,6 +3,7 @@
 var gulp = require('gulp'),
 	$ = require('gulp-load-plugins')(),
 	del = require('del'),
+	appc = require("./appc"),
 	babelRegister = require('babel-register');
 
 /**
@@ -16,10 +17,17 @@ gulp.task('clean', function (done) {
  * babel compile our source from ES6 to ES5
  */
 gulp.task('compile', ['lint-src'], function () {
+	
+	var platforms = appc.timodule.platforms;
+	var isCrossPlatform = (platforms.indexOf('ios') > -1 && platforms.indexOf('android') > -1);
+	var platformIdentifier = isCrossPlatform ? '' : platforms.indexOf('ios') > -1 ? 'ios-' : platforms.indexOf('android') > -1 ? 'android-' : '';
+	
 	return gulp.src('src/**/*.js')
+		.pipe(gulp.dest('dist/lib'))
 		.pipe($.plumber())
 		.pipe($.babel())
-		.pipe(gulp.dest('lib'));
+		.pipe($.zip(appc.timodule.moduleid + '-' + platformIdentifier + appc.timodule.version + '.zip'))
+		.pipe(gulp.dest('dist'));
 });
 
 /*
@@ -66,14 +74,17 @@ gulp.task('test', function (cb) {
 	if (!process.env.NODE_PATH) {
 		var spawn = require('child_process').spawn;
 		var child = spawn('npm', ['test'], {NODE_PATH:'./dist/mocks', stdio:'inherit'});
-		child.on('close', cb);
+		child.on('close', function() {
+			del(['dist/lib/**']);
+			cb();
+		});
 	}
 });
 
 /**
  * build tasks which performs the compile and then validates the unit tests
  */
-gulp.task('build', ['compile', 'test'], function () {
+gulp.task('build', ['clean', 'compile', 'test'], function () {
 });
 
 /**

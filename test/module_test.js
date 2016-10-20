@@ -6,8 +6,8 @@ describe('module', () => {
 	before(() => {
 		global.Ti = {};
 		global.Ti.Android = {};
-		IOSView = require('../lib/ios/ti/test').View;
-		AndroidView = require('../lib/android/ti/test').View;
+		IOSView = require('../dist/lib/ios/ti/test').View;
+		AndroidView = require('../dist/lib/android/ti/test').View;
 	});
 
 	after(() => {
